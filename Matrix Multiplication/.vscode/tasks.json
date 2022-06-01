@@ -1,0 +1,26 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build & run MatrixMul_parallel",
+            "type": "shell",
+            "command": "powershell",
+            "args": [
+                "-NoProfile",
+                "-Command",
+                "& 'D:\\AppGallery\\Downloads\\MSYS2\\ucrt64\\bin\\g++.exe' MatrixMul_parallel.cpp -std=c++17 -O2 -Wall -pthread -o MatrixMul_parallel.exe; if ($?) { .\\MatrixMul_parallel.exe }"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            }
+        }
+    ]
+}
